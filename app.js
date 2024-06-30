@@ -1,34 +1,33 @@
-function add()
-  {
-    x=document.getElementById("input1").value
-    y=document.getElementById("input2").value
-    z=parseInt(x)+parseInt(y)
-    document.getElementById("output").value=z
-  }
-function substract()
-{
-    x=document.getElementById("input1").value
-    y=document.getElementById("input2").value
-    z=parseInt(x)-parseInt(y)
-    document.getElementById("output").value=z
+function add() {
+    const x = parseFloat(document.getElementById("input1").value);
+    const y = parseFloat(document.getElementById("input2").value);
+    const result = x + y;
+    document.getElementById("output").value = result;
 }
-function multiply()
-{
-    x=document.getElementById("input1").value
-    y=document.getElementById("input2").value
-    z=parseInt(x)*parseInt(y)
-    document.getElementById("output").value=z
+
+function subtract() {
+    const x = parseFloat(document.getElementById("input1").value);
+    const y = parseFloat(document.getElementById("input2").value);
+    const result = x - y;
+    document.getElementById("output").value = result;
 }
-function divide()
-{
-    x=document.getElementById("input1").value
-    y=document.getElementById("input2").value
-    z=parseInt(x)/parseInt(y)
-    document.getElementById("output").value=z
+
+function multiply() {
+    const x = parseFloat(document.getElementById("input1").value);
+    const y = parseFloat(document.getElementById("input2").value);
+    const result = x * y;
+    document.getElementById("output").value = result;
 }
-function clr()
-{
-    document.getElementById("input1").value=""
-    document.getElementById("input2").value=""
-    document.getElementById("output").value=""
+
+function divide() {
+    const x = parseFloat(document.getElementById("input1").value);
+    const y = parseFloat(document.getElementById("input2").value);
+    const result = x / y;
+    document.getElementById("output").value = result;
+}
+
+function clr() {
+    document.getElementById("input1").value = "";
+    document.getElementById("input2").value = "";
+    document.getElementById("output").value = "";
 }
