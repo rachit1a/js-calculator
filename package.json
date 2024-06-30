@@ -1,7 +1,7 @@
 {
-  "name": "calculator-backend",
+  "name": "calculator-app",
   "version": "1.0.0",
-  "description": "Backend server for a simple calculator application",
+  "description": "Simple calculator app with frontend and backend",
   "main": "index.js",
   "scripts": {
     "start": "node index.js"
@@ -10,6 +10,5 @@
   "license": "MIT",
   "dependencies": {
     "express": "^4.17.3"
-    // Add any other dependencies here
   }
 }
