@@ -15,7 +15,7 @@ pipeline {
         
          stage('Install Dependencies') {
             steps {
-                dir('root/js-calculator') { // Replace with your project path
+                dir('/home/ubuntu/js-calculator') { // Replace with your project path
                     sh 'npm install'
                 }
             }
@@ -23,7 +23,7 @@ pipeline {
         
         stage('Build') {
             steps {
-                dir('root/js-calculator') {
+                dir('/homr/ubuntu/js-calculator') {
                     sh 'npm run build'
                 }
             }
@@ -31,7 +31,7 @@ pipeline {
         
         stage('Test') {
             steps {
-                dir('root/js-calculator') {
+                dir('/home/ubuntu/js-calculator') {
                     sh 'npm test'
                 }
             }
