@@ -1,0 +1,42 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.calculator {
+    width: 300px;
+    border: 2px solid red;
+    border-radius: 10px;
+    background-color: aqua;
+    padding: 20px;
+    text-align: center;
+}
+
+.calculator h2 {
+    border: 2px dotted blueviolet;
+    background-color: coral;
+    padding: 5px;
+}
+
+.input-group, .output-group, .operation-buttons, .clear-button {
+    margin: 10px 0;
+}
+
+.input-group label, .output-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.input-group input, .output-group input, .operation-buttons button, .clear-button button {
+    padding: 5px;
+    margin: 0 5px;
+}
+
+.operation-buttons button, .clear-button button {
+    width: 40px;
+}
