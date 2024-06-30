@@ -10,7 +10,7 @@ pipeline {
                 git 'https://github.com/rachit1a/js-calculator.git'
             }
         }
-    stage('Install Dependencies') {
+         stage('Install Dependencies') {
             steps {
                 dir('root/js-calculator') { // Replace with your project path
                     sh 'npm install'
