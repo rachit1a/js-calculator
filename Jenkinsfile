@@ -1,8 +1,10 @@
 pipeline {
     agent any
+    
     environment {
         registry = "rachit01/my-nodejs-app" // DockerHub repository name
     }
+    
     stages {
         stage('Fetch from GitHub') {
             steps {
@@ -10,6 +12,7 @@ pipeline {
                 git 'https://github.com/rachit1a/js-calculator.git'
             }
         }
+        
          stage('Install Dependencies') {
             steps {
                 dir('root/js-calculator') { // Replace with your project path
@@ -17,6 +20,7 @@ pipeline {
                 }
             }
         }
+        
         stage('Build') {
             steps {
                 dir('root/js-calculator') {
@@ -24,6 +28,7 @@ pipeline {
                 }
             }
         }
+        
         stage('Test') {
             steps {
                 dir('root/js-calculator') {
@@ -31,6 +36,7 @@ pipeline {
                 }
             }
         }
+        
         stage('Build Docker Image') {
             steps {
                 script {
@@ -38,6 +44,7 @@ pipeline {
                 }
             }
         }
+        
         stage('Push to Docker Hub') {
             steps {
                 script {
@@ -47,9 +54,19 @@ pipeline {
                 }
             }
         }
+
+         stage('Deploy to Kubernetes') {
+            steps {
+                sh 'kubectl apply -f deployment.yaml' // Apply Kubernetes deployment
+                sh 'kubectl apply -f service.yaml'    // Apply Kubernetes service
+            }
+        }
+        
         stage('Deploy') {
             steps {
                 sh "docker run -d -p 3000:3000 ${registry}:latest"
             }
         }
 
+    }
+}
