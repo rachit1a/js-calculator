@@ -2,7 +2,7 @@
 FROM node:14
 
 # Set the working directory in the container
-WORKDIR /root/js-calculator
+WORKDIR /home/ubuntu/js-calculator
 # Copy package.json and package-lock.json to the working directory
 COPY package*.json ./
 
